@@ -1,0 +1,436 @@
+/*------------------------------
+    PRELOADER
+-------------------------------*/
+
+.preeloader {
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+}
+
+.preloader-spinner {
+    -webkit-animation: 1s ease-out 0s normal none infinite running pulsate;
+    animation: 1s ease-out 0s normal none infinite running pulsate;
+    border: 5px solid #fe2f43;
+    border-radius: 40px;
+    display: block;
+    height: 40px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    width: 40px;
+    z-index: 10;
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+
+/*----------------------------------
+    MEDIUM LAYOUT: 1280px
+-----------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .navbar-header {
+        margin-top: 5px;
+    }
+    ul#nav li a {
+        padding: 30px 10px;
+        letter-spacing: 0;
+    }
+    .is-sticky ul#nav li a {
+        padding: 22px 10px;
+    }
+    /*--------------------------*/
+    ul.cauple-social-bookmark li a {
+        margin: 0 2px;
+    }
+    .management-member-details {
+        font-size: 18px;
+    }
+    .management-member-details h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    /*--------------------------*/
+    .navbar-brand {
+        padding: 0 15px;
+    }
+    .single-story-image::after {
+        right: -51.7%;
+        width: 52%;
+    }
+    .single-story:nth-child(2n) .single-story-image::after {
+        left: -51.5%;
+    }
+    input.form-control,
+    .contact-form textarea {
+        min-height: 35px;
+    }
+    .subscriber-form label {
+        font-size: 13px;
+    }
+}
+
+
+/*----------------------------------
+    TABLET LAYOUT: 768px
+------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-padding {
+        padding: 80px 0;
+    }
+    .padding-top {
+        padding-top: 80px;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse,
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-header {
+        border-bottom: 1px solid #fe2f43;
+        float: none;
+        margin: 0;
+        padding: 15px 0;
+    }
+    ul#nav {
+        width: 100%;
+        max-height: 200px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    ul#nav li {
+        float: none;
+    }
+    .navbar-brand {
+        margin-top: -8px;
+        padding: 0 15px;
+    }
+    .mainmenu-area {
+        background: #272727 none repeat scroll 0 0;
+    }
+    ul#nav li a,
+    .is-sticky ul#nav li a {
+        color: #fff;
+        padding: 10px 15px;
+    }
+    ul#nav li a:hover,
+    ul#nav li.active a {
+        background: #333 none repeat scroll 0 0;
+    }
+    ul#nav li a::after,
+    ul#nav li a::before {
+        display: none;
+    }
+    /*-----------------*/
+    .welcome-text h1 {
+        font-size: 90px;
+    }
+    .cauple-left {
+        margin-bottom: 50px;
+    }
+    .row.cauple-and-brides-family {
+        display: inherit;
+    }
+    .single-management-member {
+        float: left;
+        margin-bottom: 0;
+        padding: 15px;
+        width: 50%;
+    }
+    .cauple-img {
+        margin: 50px 0;
+    }
+    .single-story-image::after {
+        right: -9.7%;
+        width: 10%;
+        z-index: 9;
+    }
+    .single-story:nth-child(2n) .single-story-image::after {
+        border-bottom: 2px solid #ebebeb;
+        border-top: 0 none;
+        left: -10%;
+        right: auto;
+    }
+    .fact-area.section-padding {
+        padding-bottom: 40px;
+    }
+    .single-fun-fact {
+        margin-bottom: 40px;
+    }
+    .row.gallery-list > div:last-child .single-gallery {
+        margin-bottom: 0;
+    }
+    .single-blog {
+        margin-bottom: 50px;
+    }
+    .blog-area .row > div:last-child .single-blog {
+        margin-bottom: 0;
+    }
+    .event-area.section-padding {
+        padding-bottom: 50px;
+    }
+    .single-event {
+        margin-bottom: 30px;
+    }
+    .footer-top.section-padding {
+        padding-bottom: 30px;
+    }
+    .single-footer-widget {
+        margin-bottom: 50px;
+    }
+    .footer-copyright {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .footer-copyright-social-bookmark ul {
+        text-align: center;
+    }
+}
+
+
+/*----------------------------------
+    MOBILE LAYOUT: 320px
+-----------------------------------*/
+
+@media only screen and (max-width: 767px) {
+    .section-padding {
+        padding: 50px 0;
+    }
+    .area-title {
+        margin-bottom: 50px;
+    }
+    .area-title h2 {
+        font-size: 28px;
+    }
+    .padding-top {
+        padding-top: 50px;
+    }
+    .navbar-header {
+        border-bottom: 1px solid #fe2f43;
+        margin: 0;
+        padding: 15px 0;
+    }
+    .navbar-collapse {
+        padding: 0;
+    }
+    ul#nav {
+        width: 100%;
+        max-height: 200px;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin: 0;
+    }
+    ul#nav li {
+        float: none;
+    }
+    .navbar-brand {
+        margin-top: -8px;
+        padding: 0 15px;
+    }
+    .navbar-brand > img {
+        width: 90%;
+    }
+    .is-sticky .navbar-brand > img {
+        max-width: 90%;
+    }
+    .mainmenu-area {
+        background: #272727 none repeat scroll 0 0;
+    }
+    ul#nav li a,
+    .is-sticky ul#nav li a {
+        color: #fff;
+        padding: 10px 15px;
+    }
+    ul#nav li a:hover,
+    ul#nav li.active a {
+        background: #333 none repeat scroll 0 0;
+    }
+    ul#nav li a::after,
+    ul#nav li a::before {
+        display: none;
+    }
+    /*-----------------*/
+    .welcome-text h1 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .welcome-text h3 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+    h2.married-date {
+        font-size: 25px;
+        padding: 0 40px;
+    }
+    .cauple-left {
+        margin-bottom: 50px;
+    }
+    .cauple-right .cauple-images-and-social-bookmark {
+        margin-bottom: 20px;
+    }
+    .cauple-content {
+        text-align: center;
+    }
+    .row.cauple-and-brides-family {
+        display: inherit;
+    }
+    .single-management-member {
+        width: auto;
+    }
+    .cauple-img {
+        margin: 50px 0;
+    }
+    .row.single-wisher {
+        display: inherit;
+    }
+    .single-wisher-member {
+        margin-bottom: 40px;
+    }
+    .single-story {
+        display: inherit;
+        overflow: hidden;
+    }
+    .single-story-image {
+        margin-bottom: 20px;
+    }
+    .story-meta {
+        font-size: 40px;
+    }
+    .single-story > div.col-lg-7 {
+        padding-left: 15px;
+    }
+    .single-story:nth-child(2n) > div.col-lg-7 {
+        padding-left: inherit;
+        padding-right: 15px;
+    }
+    .single-story-image::after {
+        right: -9.7%;
+        width: 10%;
+        z-index: 9;
+    }
+    .single-story:nth-child(2n) .single-story-image::after {
+        border-bottom: 2px solid #ebebeb;
+        border-top: 0 none;
+        left: -10%;
+        right: auto;
+    }
+    .fact-area.section-padding {
+        padding-bottom: 40px;
+    }
+    .single-fun-fact {
+        margin-bottom: 40px;
+    }
+    .fact-area .row > div:last-child .single-fun-fact {
+        margin-bottom: 0;
+    }
+    .row.gallery-list > div:last-child .single-gallery {
+        margin-bottom: 0;
+    }
+    .single-blog {
+        margin-bottom: 50px;
+    }
+    .blog-area .row > div:last-child .single-blog {
+        margin-bottom: 0;
+    }
+    .event-area.section-padding {
+        padding-bottom: 30px;
+    }
+    .single-event {
+        margin-bottom: 30px;
+    }
+    .footer-top.section-padding {
+        padding-bottom: 0;
+    }
+    .single-footer-widget {
+        margin-bottom: 50px;
+    }
+    .footer-copyright {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .footer-copyright-social-bookmark ul {
+        text-align: center;
+    }
+}
+
+
+/*----------------------------------
+    WIDE MOBILE LAYOUT: 480px
+-----------------------------------*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .section-padding {
+        padding: 50px 0;
+    }
+    .area-title h2 {
+        font-size: 30px;
+    }
+    .single-about h3,
+    .single-features h3 {
+        font-size: 24px;
+    }
+    ul#nav {
+        width: 100%;
+        max-height: 200px;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    ul#nav li {
+        float: none;
+    }
+    .welcome-text h1 {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    .welcome-text h3 {
+        font-size: 35px;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+    }
+    h2.married-date {
+        font-size: 30px;
+        padding: 0 50px;
+    }
+}
