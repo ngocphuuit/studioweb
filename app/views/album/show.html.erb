@@ -1,2 +1,157 @@
-<h1>Album#show</h1>
-<p>Find me in app/views/album/show.html.erb</p>
+<style>
+	body {
+		background: beige;
+	}
+
+	.top-area {
+		height: 100px !important;
+	}
+
+	.list-image {
+		width: 92%;
+	    margin: 30px auto;
+	    padding: 25px;
+	    min-height: 400px;
+	    height: auto;
+	}
+
+	.polaroid-images {
+	    margin: 10px 0;
+	    float: left;
+	}
+
+	.polaroid-images a
+	{
+		background: white;
+		display: inline;
+		float: left;
+		margin: 0 15px 30px;
+		padding: 10px 10px 25px;
+		text-align: center;
+		text-decoration: none;
+		-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+		-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+		box-shadow: 0 4px 6px rgba(0,0,0,.3);
+		-webkit-transition: all .15s linear;
+		-moz-transition: all .15s linear;
+		transition: all .15s linear;
+		z-index:0;
+        position:relative;
+	}
+
+	.polaroid-images a:after {
+		color: #333;
+		font-size: 20px;
+		content: attr(title);
+		position: relative;
+		top:15px;
+	}
+
+	.polaroid-images img { 
+		display: block; 
+		/*width: inherit; */
+		width: 285px;
+		height: 300px;
+	}
+
+	.polaroid-images a:nth-child(2n)
+	{
+		-webkit-transform: rotate(4deg);  
+		-moz-transform: rotate(4deg); 
+		transform: rotate(4deg); 
+	}
+	.polaroid-images a:nth-child(3n) { 
+		-webkit-transform: rotate(-24deg);  
+		-moz-transform: rotate(-24deg); 
+		transform: rotate(-24deg); 
+	}
+	.polaroid-images a:nth-child(4n)
+	{
+		-webkit-transform: rotate(14deg);  
+		-moz-transform: rotate(14deg); 
+		transform: rotate(14deg); 
+	}
+	.polaroid-images a:nth-child(5n)
+	{
+		-webkit-transform: rotate(-18deg);  
+		-moz-transform: rotate(-18deg); 
+		transform: rotate(-18deg); 
+	}
+
+	.polaroid-images a:hover{
+		-webkit-transform: rotate(0deg); 
+		-moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+		-webkit-transform: scale(1.2); 
+		-moz-transform: scale(1.2);
+        transform: scale(1.2);
+		z-index:10;
+		-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+		-moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        box-shadow: 0 10px 20px rgba(0,0,0,.7);
+	}
+</style>
+<section class="list-image">
+	<div class="polaroid-images">
+		<a href="" title="Cave"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/192/image-01.jpg" alt="Cave" title="Cave"></a>
+		<a href="" title="Island"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/193/image-02.jpg" alt="Island" title="Island"></a>
+		<a href="" title="Islands Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/194/image-03.jpg" alt="Islands Forest" title="Islands Forest"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+		<a href="" title="Cave"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/192/image-01.jpg" alt="Cave" title="Cave"></a>
+		<a href="" title="Island"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/193/image-02.jpg" alt="Island" title="Island"></a>
+		<a href="" title="Islands Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/194/image-03.jpg" alt="Islands Forest" title="Islands Forest"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+		<a href="" title="Decking"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/195/image-04.jpg" alt="Decking" title="Decking"></a>
+		<a href="" title="Lake"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/196/image-05.jpg" alt="Lake" title="Lake"></a>
+		<a href="" title="Mountains"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/197/image-06.jpg" alt="Mountains" title="Mountains"></a>
+		<a href="" title="Forest"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/198/image-07.jpg" alt="Forest" title="Forest"></a>
+		<a href="" title="Coast Valley"><img height="200" src="http://zurb.com/playground/uploads/upload/upload/199/image-08.jpg" alt="Coast Valley" title="Coast Valley"></a>
+
+	</div>
+<div class="clear:both;"></div>
+<p style="text-align: center;">
+	<!-- Place this tag in the <head> of your document -->
+<link href="https://plus.google.com/110725720433094046987" rel="publisher">
+<script type="text/javascript">
+window.___gcfg = {lang: 'en'};
+(function() 
+{var po = document.createElement("script");
+po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(po, s);
+})();</script>
+
+</section>

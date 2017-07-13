@@ -1,9 +1,9 @@
-ActiveAdmin.register Album do
+ActiveAdmin.register Service do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :title, :description, :status, :image, :top_flg, :width
+permit_params :title, :description, :content, :image, :top_flg, :status, :prio_flg
 #
 # or
 #

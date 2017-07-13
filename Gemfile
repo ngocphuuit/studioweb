@@ -43,6 +43,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'byebug'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -52,3 +53,5 @@ gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_admin_flat_skin'
 gem 'cancan'
+gem 'carrierwave', '~> 1.0'
+gem "lazyload-rails"

@@ -27,53 +27,23 @@
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2>Nổi bật</h2>
+                        <h2>ALBUM</h2>
                         <div class="area-title-after"><span class="area-icon"><i class="fa fa-heart-o"></i></span></div>
                         <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
                     </div>
                 </div>
             </div>
             <div class="row gallery-list">
-                <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                <% @albums.each do |album| %>
+                  <div class="col-md-<%= album.width %> col-lg-<%= album.width %> col-sm-12 col-xs-12">
                     <div class="single-gallery wow fadeIn">
-                        <div class="gallery-img">
-                            <img src="img/gallary/1.jpg" alt="">
-                        </div>
-                        <div class="gallery-overlay"><a class="gallery-popup" href="img/gallary/1.jpg" data-effect="mfp-zoom-out"><i class="fa fa-search-plus"></i></a></div>
+                      <div class="gallery-img">
+                        <img src="<%= album.image %>" alt="">
+                      </div>
+                      <div class="gallery-overlay"><a class="gallery-popup" href="<%= album.image %>" data-effect="mfp-zoom-out"><i class="fa fa-search-plus"></i></a></div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                    <div class="single-gallery wow fadeIn">
-                        <div class="gallery-img">
-                            <img src="img/gallary/4.jpg" alt="">
-                        </div>
-                        <div class="gallery-overlay"><a class="gallery-popup" href="img/gallary/2.jpg" data-effect="mfp-zoom-out"><i class="fa fa-search-plus"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
-                    <div class="single-gallery wow fadeIn">
-                        <div class="gallery-img">
-                            <img src="img/gallary/3.jpg" alt="">
-                        </div>
-                        <div class="gallery-overlay"><a class="gallery-popup" href="img/gallary/3.jpg" data-effect="mfp-zoom-out"><i class="fa fa-search-plus"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                    <div class="single-gallery wow fadeIn">
-                        <div class="gallery-img">
-                            <img src="img/gallary/4.jpg" alt="">
-                        </div>
-                        <div class="gallery-overlay"><a class="gallery-popup" href="img/gallary/4.jpg" data-effect="mfp-zoom-out"><i class="fa fa-search-plus"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                    <div class="single-gallery wow fadeIn">
-                        <div class="gallery-img">
-                            <img src="img/gallary/5.jpg" alt="">
-                        </div>
-                        <div class="gallery-overlay"><a class="gallery-popup" href="img/gallary/5.jpg" data-effect="mfp-zoom-out"><i class="fa fa-search-plus"></i></a></div>
-                    </div>
-                </div>
+                  </div>
+                <% end %>
             </div>
         </div>
     </section>
@@ -92,51 +62,24 @@
                 </div>
             </div>
             <div class="row">
+                <% @blogs.each do |blog| %>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="single-blog wow fadeIn">
                         <div class="post-thumbnail">
-                            <a href="#"><img src="img/blog/1.jpg" alt=""></a>
+                            <a href="#"><img src="<%= blog.image %>" alt=""></a>
                         </div>
                         <div class="post-details">
                             <div class="post-title-and-date">
-                                <h3><a href="#">OUR STORY</a></h3>
-                                <p class="postmeta"><a href="#">25 October 2016</a></p>
+                                <h3><a href="#"><%= blog.title %></a></h3>
+                                <!--<p class="postmeta"><a href="#">25 October 2016</a></p>-->
+                                <p class="postmeta"><a href="#"><%= blog.created_at %></a></p>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <p><%= blog.description %> </p>
                             <a href="#" class="read-more">Read More...</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeIn">
-                        <div class="post-thumbnail">
-                            <a href="#"><img src="img/blog/2.jpg" alt=""></a>
-                        </div>
-                        <div class="post-details">
-                            <div class="post-title-and-date">
-                                <h3><a href="#">OUR STORY</a></h3>
-                                <p class="postmeta"><a href="#">25 October 2016</a></p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="#" class="read-more">Read More...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeIn">
-                        <div class="post-thumbnail">
-                            <a href="#"><img src="img/blog/3.jpg" alt=""></a>
-                        </div>
-                        <div class="post-details">
-                            <div class="post-title-and-date">
-                                <h3><a href="#">OUR STORY</a></h3>
-                                <p class="postmeta"><a href="#">25 October 2016</a></p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="#" class="read-more">Read More...</a>
-                        </div>
-                    </div>
-                </div>
+                <% end %>
             </div>
         </div>
     </section>
@@ -156,24 +99,17 @@
             </div>
             <div class="row cauple-and-brides-family">
                 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 wow fadeIn">
+                    <% @services1.each do |service| %>
                     <div class="single-management-member">
                         <div class="management-member-img">
-                            <img src="img/important-people/1.jpg" alt="">
+                            <img src="<%= service.image %>" alt="">
                         </div>
                         <div class="management-member-details">
-                            <h3>Hình cưới</h3>
-                            <p>(Grooms Father)</p>
+                            <h3><%= service.title %></h3>
+                            <p>(<%= service.description %>)</p>
                         </div>
                     </div>
-                    <div class="single-management-member">
-                        <div class="management-member-img">
-                            <img src="img/important-people/2.jpg" alt="">
-                        </div>
-                        <div class="management-member-details">
-                            <h3>Ngoại cảnh</h3>
-                            <p>(Grooms Mother)</p>
-                        </div>
-                    </div>
+                    <% end %>
                 </div>
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 wow fadeIn">
                     <div class="cauple-img">
@@ -181,24 +117,17 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 wow fadeIn">
-                    <div class="single-management-member">
+                  <% @services2.each do |service| %>
+                      <div class="single-management-member">
                         <div class="management-member-img">
-                            <img src="img/important-people/3.jpg" alt="">
+                          <img src="<%= service.image %>" alt="">
                         </div>
                         <div class="management-member-details">
-                            <h3>Kỷ Yếu</h3>
-                            <p>(Brides Father)</p>
+                          <h3><%= service.title %></h3>
+                          <p>(<%= service.description %>)</p>
                         </div>
-                    </div>
-                    <div class="single-management-member">
-                        <div class="management-member-img">
-                            <img src="img/important-people/4.jpg" alt="">
-                        </div>
-                        <div class="management-member-details">
-                            <h3>Dịch vụ khác</h3>
-                            <p>(Brides Mother)</p>
-                        </div>
-                    </div>
+                      </div>
+                  <% end %>
                 </div>
             </div>
         </div>
@@ -277,7 +206,7 @@
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
-                        <h2>Our Love Story</h2>
+                        <h2>About Us</h2>
                         <div class="area-title-after"><span class="area-icon"><i class="fa fa-heart-o"></i></span></div>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                     </div>
@@ -297,7 +226,7 @@
                     </div>
                     <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12">
                         <div class="single-story-details">
-                            <h3>The First Day we Met</h3>
+                            <h3>Chuyên Nghiệp</h3>
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                             <a href="#" class="read-more">Read more <i class="fa fa-angle-right"></i></a>
                         </div>
@@ -316,7 +245,7 @@
                     </div>
                     <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12">
                         <div class="single-story-details">
-                            <h3>The First Day we Met</h3>
+                            <h3>Nhiệt Tình</h3>
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                             <a href="#" class="read-more">Read more <i class="fa fa-angle-right"></i></a>
                         </div>
@@ -335,7 +264,7 @@
                     </div>
                     <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12">
                         <div class="single-story-details">
-                            <h3>The First Day we Met</h3>
+                            <h3>Cháy Hết Mình</h3>
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                             <a href="#" class="read-more">Read more <i class="fa fa-angle-right"></i></a>
                         </div>

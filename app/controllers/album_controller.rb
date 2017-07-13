@@ -3,8 +3,10 @@ class AlbumController < ApplicationController
   end
 
   def show
+  	# render :layout => false
   end
 
   def index
+  	render :layout => false
   end
 end
