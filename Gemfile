@@ -55,3 +55,4 @@ gem 'active_admin_flat_skin'
 gem 'cancan'
 gem 'carrierwave', '~> 1.0'
 gem "lazyload-rails"
+gem 'lightbox2-rails'
