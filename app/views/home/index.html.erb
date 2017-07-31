@@ -22,17 +22,18 @@
     <% end %>
 
     <!--HÌNH NỔI BẬT-->
-    <section class="gallery-area section-padding" id="gallery">
+    <section class="gallery-area section-padding" id="gallery" style="
+    background-color: aliceblue;
+">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
                         <h2>ALBUM</h2>
                         <div class="area-title-after"><span class="area-icon"><i class="fa fa-heart-o"></i></span></div>
-                        <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row gallery-list">
                 <% @albums.each do |album| %>
                   <div class="col-md-<%= album.width %> col-lg-<%= album.width %> col-sm-12 col-xs-12">
@@ -52,15 +53,14 @@
     <!--Dịch Vụ-->
     <section class="management-people-area section-padding" id="managent">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
                         <h2>Dịch Vụ</h2>
                         <div class="area-title-after"><span class="area-icon"><i class="fa fa-heart-o"></i></span></div>
-                        <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row cauple-and-brides-family">
                 <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 wow fadeIn">
                     <% @services1.each do |service| %>
@@ -101,7 +101,7 @@
     <!--BLOG AREA-->
     <section class="blog-area section-padding" id="blog">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
                         <h2>Our Blog</h2>
@@ -109,7 +109,7 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <% @blogs.each do |blog| %>
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
@@ -138,7 +138,7 @@
     <section class="wisher-area section-padding" id="wisher">
         <div class="wisher-area-bg"></div>
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
                         <h2>Đánh giá của khách hàng</h2>
@@ -146,7 +146,7 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row wow fadeIn">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 wisher-slider">
                     <div class="row single-wisher">
@@ -203,7 +203,7 @@
     <!--STORY AREA-->
     <section class="story-area section-padding" id="story">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
                         <h2>About Us</h2>
@@ -211,7 +211,7 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row story-list">
                 <div class="single-story wow fadeIn">
                     <div class="col-md-5 col-lg-5 col-sm-6 col-xs-12">
@@ -323,7 +323,7 @@
     <!--BẢNG GIÁ-->
     <section class="event-area section-padding" id="event" style="background-color: aliceblue">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                     <div class="area-title text-center wow fadeIn">
                         <h2>Bảng giá</h2>
@@ -331,7 +331,7 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
                     <div class="single-event wow fadeIn">
@@ -497,7 +497,7 @@
         <div class="top-party-attendance-area section-padding">
             <div class="party-area-bg"></div>
             <div class="container">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
                         <div class="area-title text-center wow fadeIn">
                             <h2>Liên hệ</h2>
@@ -505,7 +505,7 @@
                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="contact-form-area wow fadeIn">
