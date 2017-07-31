@@ -622,6 +622,7 @@ ul.cauple-social-bookmark li a:hover {
 .management-member-img img {
     border-radius: 50%;
     width: 100%;
+    min-height: 262.5px;
 }
 
 .management-member-details {
@@ -671,7 +672,7 @@ ul.cauple-social-bookmark li a:hover {
 }
 
 .wisher-area-bg {
-    background: rgba(0, 0, 0, 0) url("img/wishes-person/wishes_area_bg.jpg") no-repeat scroll 0 0 / cover;
+    background: rgba(0, 0, 0, 0) url("https://scontent.fsgn5-4.fna.fbcdn.net/v/t31.0-8/19417367_1411515815606616_4658449672586687783_o.jpg?oh=145b61582228070e5cf1213f8e673546&oe=59EB0A40") no-repeat scroll 0 0 / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -1433,7 +1434,7 @@ input.form-control:focus,
     height: 2px;
     left: 0;
     position: absolute;
-    width: 40px;
+    width: 95px;
 }
 
 .single-footer-widget ul {
@@ -1704,7 +1705,7 @@ a.scrolltotop:hover {
     transition: all 0.3s ease 0s;
     width: 100%;
     background: cadetblue;
-    color: #3366cc;
+    color: #802f2f;
     font-size: 25px;
     padding-top: 6%;
 }
