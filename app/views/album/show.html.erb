@@ -8,6 +8,7 @@
 	}
 
 	.list-image {
+		display: -webkit-box;
 		width: 92%;
 	    margin: 30px auto;
 	    padding: 25px;
@@ -22,6 +23,7 @@
 
 	.polaroid-images a
 	{
+		width: 18% !important;
 		background: white;
 		display: inline;
 		float: left;
@@ -50,8 +52,10 @@
 	.polaroid-images img { 
 		display: block; 
 		/*width: inherit; */
-		width: 285px;
-		height: 300px;
+		/*width: 285px;*/
+		width: 100%;
+		height: auto;
+		max-height: 300px;
 	}
 
 	.polaroid-images a:nth-child(2n)

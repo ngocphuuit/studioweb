@@ -124,11 +124,12 @@ input:-webkit-autofill:focus {
 }
 
 .area-title {
-    margin-bottom: 70px;
+    /*margin-bottom: 70px;*/
 }
 
 .area-title h2 {
-    color: #fe2f43;
+    /*color: #fe2f43;*/
+    color: #002369;
     font-size: 36px;
     letter-spacing: 1px;
     line-height: 1;
@@ -154,7 +155,8 @@ input:-webkit-autofill:focus {
 
 .area-title-after::before,
 .area-title-after::after {
-    background: #fe2f43 none repeat scroll 0 0;
+    /*background: #fe2f43 none repeat scroll 0 0;*/
+    background: ##002369 none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -170,7 +172,8 @@ input:-webkit-autofill:focus {
 }
 
 .area-icon {
-    color: #fe2f43;
+    /*color: #fe2f43;*/
+    color: #002369;
     font-size: 30px;
     height: 30px;
     left: 50%;
@@ -198,7 +201,7 @@ input:-webkit-autofill:focus {
 }
 
 .section-padding {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .padding-top {
@@ -270,7 +273,8 @@ input:-webkit-autofill:focus {
 }
 
 .mainmenu-area {
-    background: rgba(0, 0, 0, .3);
+    /*background: rgba(0, 0, 0, .3);*/
+    background: rgba(37, 97, 115, 0.3);
     position: relative;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -373,7 +377,8 @@ ul#nav li.active a {
 }
 
 .is-sticky .mainmenu-area {
-    background: #212121;
+    /*background: #212121;*/
+    background: #3366cc;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     z-index: 99999;
 }
@@ -688,7 +693,7 @@ ul.cauple-social-bookmark li a:hover {
 }
 
 .wisher-area-bg::after {
-    background: #fe2f43 none repeat scroll 0 0;
+    background: #2fc5fe none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -961,7 +966,7 @@ ul.cauple-social-bookmark li a:hover {
 }
 
 .single-gallery::after {
-    background: #fe2f43 none repeat scroll 0 0;
+    background: #3366cc none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -1093,7 +1098,7 @@ ul.cauple-social-bookmark li a:hover {
 }
 
 .single-blog:hover .post-thumbnail::before {
-    border-color: #fe2f43;
+    border-color: #3366cc;
 }
 
 .post-thumbnail img {
@@ -1150,14 +1155,16 @@ p.postmeta a:hover {
 }
 
 .single-story-details h3 {
-    color: #fe2f43;
+    /*color: #fe2f43;*/
+    color: #3366cc;
     font-size: 30px;
     margin-bottom: 25px;
 }
 
 a.read-more {
     border: 1px solid;
-    color: #fe2f43;
+    /*color: #fe2f43;*/
+    color: #3366cc;
     direction: ltr;
     display: inline-block;
     font-size: 16px;
@@ -1570,7 +1577,7 @@ ul.footer-pages-menu a {
 }
 
 .footer-bottom {
-    background: #fe2f43 none repeat scroll 0 0;
+    background: #3366cc none repeat scroll 0 0;
     color: #ffffff;
     padding: 30px 0;
 }
@@ -1617,7 +1624,7 @@ ul.footer-pages-menu a {
 -------------------------------*/
 
 a.scrolltotop {
-    background: #fe2f43 none repeat scroll 0 0;
+    background: #3366cc none repeat scroll 0 0;
     bottom: 20px;
     color: #ffffff;
     display: none;
