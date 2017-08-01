@@ -56,4 +56,5 @@ gem 'cancan'
 gem 'carrierwave', '~> 1.0'
 gem "lazyload-rails"
 gem 'lightbox2-rails'
-gem 'coffee-script-source', '~> 1.4.0'
+gem 'coffee-script-source'
+gem 'jquery-colorbox-rails'

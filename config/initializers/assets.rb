@@ -12,3 +12,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( lightbox/* )
 Rails.application.config.assets.precompile += %w( lightbox.js )
 Rails.application.config.assets.precompile += %w( lightbox.css )
+Rails.application.config.assets.precompile += %w( jquery.colorbox.js )
+Rails.application.config.assets.precompile += %w( jquery.colorbox.css )
+Rails.application.config.assets.precompile += %w( jquery.colorbox-example3.css )

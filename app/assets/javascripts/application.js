@@ -16,3 +16,4 @@
 //= require_tree .
 //= require_self
 //= require lightbox
+//= require jquery.colorbox
