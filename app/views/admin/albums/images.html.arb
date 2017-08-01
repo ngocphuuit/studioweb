@@ -1,0 +1,4 @@
+table_for assigns[:album].images do
+  column :id
+  
+end
