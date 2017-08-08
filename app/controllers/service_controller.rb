@@ -4,7 +4,6 @@ class ServiceController < ApplicationController
 	end
 
 	def show
-		puts params
 		@albums = Album::where(service_id: params[:id]).order(id: 'desc')
 	end
 end

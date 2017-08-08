@@ -1710,3 +1710,7 @@ a.scrolltotop:hover {
     font-size: 25px;
     padding-top: 6%;
 }
+
+.list-image {
+    min-height: calc(100% - 250px) !important;
+}

@@ -1,8 +1,6 @@
 class HomeController < ApplicationController
 	def index
 		web_config = WebConfig.all
-
-		# byebug
 		@blogs = Blog.where(top_flg: true)
 
 		@albums = Album.where(top_flg: true)
