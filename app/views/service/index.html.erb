@@ -1,0 +1,134 @@
+<style>
+	body {
+		background: beige;
+	}
+
+	.top-area {
+		height: 100px !important;
+	}
+
+	.list-image {
+		display: -webkit-box;
+		width: 92%;
+	    margin: 30px auto;
+	    padding: 25px;
+	    min-height: 400px;
+	    height: auto;
+	}
+
+	.polaroid-images {
+	    margin: 10px 0;
+	    float: left;
+	}
+
+	.polaroid-images a
+	{
+		width: 17% !important;
+		background: white;
+		display: inline;
+		float: left;
+		margin: 0 15px 30px;
+		padding: 10px 10px 25px;
+		text-align: center;
+		text-decoration: none;
+		-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+		-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+		box-shadow: 0 4px 6px rgba(0,0,0,.3);
+		-webkit-transition: all .15s linear;
+		-moz-transition: all .15s linear;
+		transition: all .15s linear;
+		z-index:0;
+        position:relative;
+	}
+
+	.polaroid-images a:after {
+		color: #333;
+		font-size: 20px;
+		content: attr(title);
+		position: relative;
+		top:15px;
+	}
+
+	.polaroid-images img { 
+		display: block; 
+		/*width: inherit; */
+		/*width: 285px;*/
+		width: 100%;
+		height: auto;
+		max-height: 300px;
+	}
+
+	.polaroid-images a:nth-child(2n)
+	{
+		-webkit-transform: rotate(4deg);  
+		-moz-transform: rotate(4deg); 
+		transform: rotate(4deg); 
+	}
+	.polaroid-images a:nth-child(3n) { 
+		-webkit-transform: rotate(-24deg);  
+		-moz-transform: rotate(-24deg); 
+		transform: rotate(-24deg); 
+	}
+	.polaroid-images a:nth-child(4n)
+	{
+		-webkit-transform: rotate(14deg);  
+		-moz-transform: rotate(14deg); 
+		transform: rotate(14deg); 
+	}
+	.polaroid-images a:nth-child(5n)
+	{
+		-webkit-transform: rotate(-18deg);  
+		-moz-transform: rotate(-18deg); 
+		transform: rotate(-18deg); 
+	}
+
+	.polaroid-images a:hover{
+		-webkit-transform: rotate(0deg); 
+		-moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+		-webkit-transform: scale(1.2); 
+		-moz-transform: scale(1.2);
+        transform: scale(1.2);
+		z-index:10;
+		-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+		-moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        box-shadow: 0 10px 20px rgba(0,0,0,.7);
+	}
+</style>
+<section class="list-image gallery-area section-padding" id="gallery">
+	<div class="polaroid-images">
+		<% @albums.each do |album| %>
+			<a href="<%= album.image %>" class="group<%= album.id %>"  data-class="group<%= album.id %>" data-url="/album/<%= album.id %>/image" title="<%= album.description %>">
+				<img height="200" src="<%= album.image %>" alt="<%= album.description %>" title="<%= album.description %>">
+			</a>
+		<% end %>
+		
+	</div>
+	<div style="display: none" class="display-image">
+	</div>
+<div class="clear:both;"></div>
+<p style="text-align: center;">
+<script>
+	$('a').click(function(e){
+		e.preventDefault();
+		var dataClass = $(this).attr('data-class');
+		var dataUrl = $(this).attr('data-url');
+		$.ajax({
+			url: dataUrl,
+			success: function(data){
+				var html = '';
+				data.forEach(function(item) {
+					html += '<a href="' + item.url.url +'" class="' + dataClass + '" data-class="' + dataClass + '" title="Coast Valley"><img height="200" src="'+ item.url.url +'" alt="Coast Valley" title="Coast Valley"></a>'
+				});
+				$('.display-image').html(html);
+				$("." + dataClass).colorbox({rel: dataClass, transition:"none", width:"100%", height:"100%", scrolling: false});
+			}
+		});
+	});
+	$(document).bind('cbox_open', function () {
+	    $('html').css({ overflow: 'hidden' });
+	}).bind('cbox_closed', function () {
+	    $('html').css({ overflow: 'auto' });
+	}); 
+</script>
+</section>

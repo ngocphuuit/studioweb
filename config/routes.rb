@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
-  get 'image/index'
+  # get 'image/index'
 
-  get 'image/show'
+  # get 'image/show'
 
-  get 'image/new'
+  # get 'image/new'
 
-  get 'album/new'
+  # get 'album/new'
 
-  get 'album/show'
+  # get 'album/show'
 
-  get 'album/index'
+  # get 'album/index'
+  resources :service, only: [:index, :show]
+
+  resources :album, only: [:index] do
+    resources :image, only: [:index, :show, :new]
+  end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

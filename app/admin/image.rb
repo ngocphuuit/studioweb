@@ -16,9 +16,13 @@ config.per_page = 10
 # end
   index pagination_total: false do
     selectable_column
+    id_column
+    column :album
     column "Image" do |product|
       image_tag product.url, class: 'my_image_size'
     end
+    column :present_flg
+    actions
   end
   # show do
   #   h3 image.url

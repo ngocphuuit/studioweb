@@ -3,7 +3,7 @@ ActiveAdmin.register Album do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :title, :description, :status, :image, :top_flg, :width
+permit_params :title, :description, :service_id, :status, :image, :top_flg, :width
 config.per_page = 10
 #
 # or
@@ -16,7 +16,7 @@ config.per_page = 10
   index pagination_total: false do
     selectable_column
     id_column
-    column :title
+    column :service
     column :description
     column :status
     column "Image" do |album|
