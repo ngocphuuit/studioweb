@@ -90,16 +90,16 @@
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="single-blog wow fadeIn">
                         <div class="post-thumbnail">
-                            <a href="#"><img src="<%= blog.image %>" alt=""></a>
+                            <a href="/blog/<%= blog.id %>" target="_blank"><img src="<%= blog.image %>" alt=""></a>
                         </div>
                         <div class="post-details">
                             <div class="post-title-and-date">
-                                <h3><a href="#"><%= blog.title %></a></h3>
+                                <h3><a href="/blog/<%= blog.id %>"><%= blog.title %></a></h3>
                                 <!--<p class="postmeta"><a href="#">25 October 2016</a></p>-->
-                                <p class="postmeta"><a href="#"><%= blog.created_at %></a></p>
+                                <p class="postmeta"><a href="javascript:void(0)"><%= blog.created_at.to_formatted_s(:long) %></a></p>
                             </div>
                             <p><%= blog.description %> </p>
-                            <a href="#" class="read-more">Read More...</a>
+                            <a href="/blog/<%= blog.id %>" class="read-more">Read More...</a>
                         </div>
                     </div>
                 </div>

@@ -58,3 +58,4 @@ gem "lazyload-rails"
 gem 'lightbox2-rails'
 gem 'coffee-script-source'
 gem 'jquery-colorbox-rails'
+gem 'ckeditor', github: 'galetahub/ckeditor'

@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   # get 'album/new'
 
   # get 'album/show'
-
-  get 'blog', to: 'blog#index'
-  get 'blog/show', to: 'blog#show'
+  # 
+  resources :blog, only: [:index, :show]
 
   resources :service, only: [:index, :show]
 
