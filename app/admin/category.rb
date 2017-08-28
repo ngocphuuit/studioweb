@@ -12,6 +12,4 @@ permit_params :name, :url, :parent_id
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
-
 end

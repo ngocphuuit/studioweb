@@ -1,11 +1,21 @@
+<style>
+	.img-recent-post {
+		min-height: 61px;
+	}
+</style>
 <div class="col-xs-12 col-sm-4 col-md-3">
 	<aside class="aside-section">
 		<div class="categories-wrapper">
 			<div class="info-wrap">
-				<h2>Categories</h2>
+				<h2>Dịch Vụ</h2>
 			</div>
 			<ul>
-				<li>
+				<% @services.each do |service| %>
+					<li>
+						<a href="#"><%= service.title %></a>
+					</li>
+				<% end %>
+				<!-- <li>
 					<a href="#">Events</a>
 				</li>
 				<li>
@@ -19,48 +29,36 @@
 				</li>
 				<li>
 					<a href="#">General</a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<div class="categories-wrapper recent-post">
 			<div class="info-wrap">
-				<h2>Recent Posts</h2>
+				<h2>Bài đăng gần nhất</h2>
 			</div>
-			<div class="recent-post-wrapper">
-				<figure>
-					<a href="#"><img src="http://theemon.com/f/forever/Livepreview/wedding/assets/images/recent-post-1.png" alt=""></a>
-				</figure>
-				<div class="recent-update">
-					<span>22 May  2016</span>
-					<h4><a href="blog-detail-page.html">And then she said "I do"</a></h4>
+			<% @recent_posts.each do |post| %>
+				<div class="recent-post-wrapper">
+					<figure>
+						<a href="/blog/<%= post.id %>"><img src="<%= post.image %>" alt="" class="img-recent-post"></a>
+					</figure>
+					<div class="recent-update">
+						<span><%= post.created_at.to_formatted_s(:long) %></span>
+						<h4><a href="/blog/<%= post.id %>"><%= post.title %></a></h4>
+					</div>
 				</div>
-			</div>
-			<div class="recent-post-wrapper">
-				<figure>
-					<a href="blog-detail-page.html"><img src="http://theemon.com/f/forever/Livepreview/wedding/assets/images/recent-post-2.png" alt=""></a>
-				</figure>
-				<div class="recent-update">
-					<span>22 May  2016</span>
-					<h4><a href="blog-detail-page.html">What a difference a day can make</a></h4>
-				</div>
-			</div>
-			<div class="recent-post-wrapper">
-				<figure>
-					<a href=""><img src="http://theemon.com/f/forever/Livepreview/wedding/assets/images/recent-post-3.png" alt=""></a>
-
-				</figure>
-				<div class="recent-update">
-					<span>22 May  2016</span>
-					<h4><a href="#">I'll Aways Be Daddy's Girl</a></h4>
-				</div>
-			</div>
+			<% end %>
 		</div>
 		<div class="categories-wrapper tag">
 			<div class="info-wrap">
-				<h2>Tags</h2>
+				<h2>Thẻ</h2>
 			</div>
 			<ul class="activities clearfix">
-				<li>
+				<% @services.each do |service| %>
+					<li>
+						<a href="#"><%= service.title %></a>
+					</li>
+				<% end %>
+				<!-- <li>
 					<a href="#">Love</a>
 				</li>
 				<li>
@@ -80,7 +78,7 @@
 				</li>
 				<li>
 					<a href="#">Video</a>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</aside>

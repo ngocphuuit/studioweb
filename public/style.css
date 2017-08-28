@@ -2097,9 +2097,12 @@ a.scrolltotop:hover {
 }
 .tag ul li {
     float: left;
+    background-color: lightgray;
     padding: 10px 12px;
     border-bottom: 0px;
     padding-left: 0;
+    margin: 2px;
+    padding: 2px;
 }
 .Instagram ul li {
     float: left;

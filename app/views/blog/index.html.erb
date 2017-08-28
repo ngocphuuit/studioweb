@@ -5,6 +5,26 @@
 	.top-area {
 		height: 100px !important;
 	}
+	.previous_page, .current, .next_page, .read-more-btn, .pagination a {
+		margin-right: 10px;
+	    border-radius: 0px;
+	    font-size: 16px;
+	    font-family: "Roboto", serif;
+	    padding: 6px 12px;
+	    margin-left: -1px;
+	    line-height: 1.42857143;
+	}
+	.previous_page, .next_page, .read-more-btn, .pagination a {
+		border: 1px solid #e08e79;
+		color: #e08e79;
+	}
+	.pagination a:hover {
+		background-color: antiquewhite;
+	}
+	.disabled, .current {
+	    border: 1px solid darkgray !important;
+	    color: darkgray !important;
+	}
 </style>
 <section class="blog">
 <div class="parallax-window blog" data-parallax="scroll" data-image-src="http://theemon.com/f/forever/Livepreview/wedding/assets/images/blog-banner.jpg">
@@ -30,59 +50,12 @@
 							<p>
 								<%= blog.description %>
 							</p>
-							<a href="/blog/<%= blog.id %>" class="btn btn-default"> READ MORE <i class="fa fa-angle-right"></i></a>
+							<a href="/blog/<%= blog.id %>" class="btn btn-default read-more-btn"> READ MORE <i class="fa fa-angle-right"></i></a>
 						</div>
 					</article>
 					<% end %>
-					<article class="blog-post-wrapper">
-						<figure class="video">
-							<img src="http://theemon.com/f/forever/Livepreview/wedding/assets/images/blog-2-img.jpg" alt="" data-video="https://www.youtube.com/embed/xW_AsV7k42o">
-						</figure>
-						<div class="post-blog">
-							<span class="timing-blog"><i class="fa fa-calendar"> </i> <span> Nov 20, 2016 </span> <i class="fa fa-folder-open-o"></i> <span> Wedding </span></span>
-							<h2><a>What a difference a day can make</a></h2>
-							<p>
-								This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything...
-							</p>
-							<a href="blog-detail-page.html" class="btn btn-default"> READ MORE <i class="fa fa-angle-right"></i></a>
-						</div>
-					</article>
-					<article class="blog-post-wrapper">
-						<figure><img src="http://theemon.com/f/forever/Livepreview/wedding/assets/images/blog-3-img.jpg" alt="">
-						</figure>
-						<div class="post-blog">
-							<span class="timing-blog"><i class="fa fa-calendar"> </i> <span> Nov 20, 2016 </span> <i class="fa fa-folder-open-o"></i> <span> Wedding </span></span>
-							<h2><a href="#">I'll Aways Be Daddy's Girl</a></h2>
-							<p>
-								This life is what you make it. No matter what, you're going to mess up sometimes, it's a universal truth. But the good part is you get to decide how you're going to mess it up. Girls will be your friends - they'll act like it anyway. But just remember, some come, some go. The ones that stay with you through everything...
-							</p>
-							<a href="blog-detail-page.html" class="btn btn-default"> READ MORE <i class="fa fa-angle-right"></i></a>
-						</div>
-					</article>
 					<div class="next-prev-class">
-						<ul class="pagination">
-							<li>
-								<a href="#" aria-label="Previous"> <span aria-hidden="true">&lt;</span> </a>
-							</li>
-							<li>
-								<a href="#">1</a>
-							</li>
-							<li>
-								<a href="#">2</a>
-							</li>
-							<li>
-								<a href="#">3</a>
-							</li>
-							<li>
-								<a href="#">4</a>
-							</li>
-							<li>
-								<a href="#">5</a>
-							</li>
-							<li>
-								<a href="#" aria-label="Next"> <span aria-hidden="true"> &gt;</span> </a>
-							</li>
-						</ul>
+						<%= will_paginate @blogs %>
 					</div>
 				</div>
 				<%= render "left_navigation" %>
